@@ -9,5 +9,9 @@ gulp.task('styles', function(done) {
     console.log("Imagine SASS or PostCSS tasks running here!");
     return  gulp.src('./app/assets/styles/styles.css')
             .pipe(postcss([cssimports, nested, cssvars, autoprefixer]))
+            .on('error', function(errorInfo) {
+                console.log(errorInfo.toString());
+                this.emit('end');
+            })
             .pipe(gulp.dest('./app/temp/styles'));
 });
