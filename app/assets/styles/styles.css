@@ -1,12 +1,5 @@
-$mainBlue: #2f5572;
-
-* {
-    padding: 0px;
-    margin: 0px;
-}
-body {
-    color: $mainBlue;
-    padding: 10px;
-    margin: 10px;
-    columns: 300px 2;
-}
+@import "normalize.css";
+@import "base/_global-styles";
+@import "base/_variables";
+@import "modules/_large-hero";
+@import "modules/_btn";
