@@ -1079,11 +1079,11 @@ Instead edit gulp/templates/sprite */
   position: absolute;
   width: 100%;
   z-index: 2;
-  transition: background-color 0.3s ease-out;
+  transition: background-color .3s ease-out;
 }
 
 .site-header--is-expanded {
-  background-color: rgba(47,85,114, 0.55);
+  background-color: rgba(47,85,114, .55);
 }
 
 @media (min-width: 800px) {
@@ -1126,9 +1126,9 @@ Instead edit gulp/templates/sprite */
   width: 20px;
   height: 19px;
   position: absolute;
+  z-index: 10;
   top: 10px;
   right: 10px;
-  z-index: 10;
 }
 
 .site-header__menu-icon::before {
@@ -1138,9 +1138,9 @@ Instead edit gulp/templates/sprite */
   left: 0;
   width: 20px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: #FFF;
   transform-origin: 0 0;
-  transition: transform 0.3s ease-out;
+  transition: transform .3s ease-out;
 }
 
 .site-header__menu-icon__middle {
@@ -1149,21 +1149,21 @@ Instead edit gulp/templates/sprite */
   left: 0;
   width: 20px;
   height: 3px;
-  background-color: #ffffff;
-  transition: all 0.3s ease-out;
+  background-color: #FFF;
+  transition: all .3s ease-out;
   transform-origin: 0 50%;
 }
 
 .site-header__menu-icon::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   width: 20px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: #FFF;
   transform-origin: 0 100%;
-  transition: transform 0.3s ease-out;
+  transition: transform .3s ease-out;
 }
 
 @media (min-width: 800px) {
@@ -1189,9 +1189,9 @@ Instead edit gulp/templates/sprite */
 .site-header__menu-content {
   opacity: 0;
   transform: scale(1.2);
-  transition: all 0.3s ease-out;
-  z-index: -10;
+  transition: all .3s ease-out;
   position: relative;
+  z-index: -10;
   padding-top: 90px;
   text-align: center;
 }
@@ -1201,8 +1201,8 @@ Instead edit gulp/templates/sprite */
   .site-header__menu-content {
     opacity: 1;
     z-index: 1;
+    padding-top: 0;
     transform: scale(1);
-    padding-top: 0px;
   }
 }
 
@@ -1219,7 +1219,7 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
   .primary-nav {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 
@@ -1250,14 +1250,14 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
   .primary-nav li {
+    padding-right: 20px;
     float: left;
     display: block;
-    padding-right: 20px;
   }
 }
 
 .primary-nav li:last-child {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 @media (min-width: 800px) {
@@ -1273,15 +1273,26 @@ Instead edit gulp/templates/sprite */
   text-decoration: none;
   display: block;
   padding: 5px 8px;
-  font-size: 0.8rem;
-  background-color: rgba(47,85,114, 0.5);
+  font-size: .8rem;
+  background-color: rgba(47,85,114, .5);
 }
 
 @media (min-width: 800px) {
 
   .primary-nav a {
-    padding: 12px 0;
     font-size: 1rem;
+    padding: 12px 0;
     background-color: transparent;
   }
+}
+
+.reveal-item {
+  opacity: 0;
+  transition: all 1.5s ease-out;
+  transform: scale(1.15);
+}
+
+.reveal-item--is-visible {
+  opacity: 1;
+  transform: scale(1);
 }
