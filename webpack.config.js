@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var ignore = new webpack.IgnorePlugin(new RegExp("/(node_modules|waypoints)/"))
 module.exports = {
   entry: "./app/assets/scripts/App.js",
